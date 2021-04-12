@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" remoteFilesAllowedToDisappearOnAutoupload="false">
+  <component name="PublishConfigData" serverName="students-dev-stav.technion.ac.il" filePermissions="509" folderPermissions="493" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
       <paths name="students-dev-stav.technion.ac.il">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/hackfrst" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
