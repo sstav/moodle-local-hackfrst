@@ -15,38 +15,12 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Class containing data for index page
+ * Strings for component 'local_hackfrst', language 'en'
  *
  * @package    local_hackfrst
  * @copyright  2015 Damyon Wiese
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-namespace local_hackfrst\output;
 
-require_once("$CFG->dirroot/webservice/externallib.php");
-
-use renderable;
-use templatable;
-use renderer_base;
-use stdClass;
-
-/**
- * Class containing data for index page
- *
- * @copyright  2015 Damyon Wiese
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- */
-class index_page implements renderable, templatable {
-
-    /**
-     * Export this data so it can be used as the context for a mustache template.
-     *
-     * @return stdClass
-     */
-    public function export_for_template(renderer_base $output) {
-        $data = \core_webservice_external::get_site_info();
-        $data['currenttime'] = userdate(time()) . ' ' . rand();
-
-        return $data;
-    }
-}
+$string['pagetitle'] = 'עמוד הבית עם כל היופי';
+$string['pluginname'] = 'האקיסט דמו';

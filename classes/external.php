@@ -17,11 +17,11 @@
 /**
  * This is the external API for this plugin.
  *
- * @package    local_hackfest
+ * @package    local_hackfrst
  * @copyright  2015 Damyon Wiese
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-namespace local_hackfest;
+namespace local_hackfrst;
 
 require_once("$CFG->libdir/externallib.php");
 require_once("$CFG->dirroot/webservice/externallib.php");
@@ -64,8 +64,8 @@ class external extends external_api {
      */
     public static function get_site_info($serviceshortnames = array()) {
         global $PAGE;
-        $renderer = $PAGE->get_renderer('local_hackfest');
-        $page = new \local_hackfest\output\index_page();
+        $renderer = $PAGE->get_renderer('local_hackfrst');
+        $page = new \local_hackfrst\output\index_page();
         return $page->export_for_template($renderer);
     }
 

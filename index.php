@@ -17,25 +17,25 @@
 /**
  * This is the only page in this plugin.
  *
- * @package    local_hackfest
+ * @package    local_hackfrst
  * @copyright  2015 Damyon Wiese
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 require_once(__DIR__ . '/../../config.php');
 
-$title = get_string('pagetitle', 'local_hackfest');
-$pagetitle = get_string('pagetitle', 'local_hackfest');
+$title = get_string('pagetitle', 'local_hackfrst');
+$pagetitle = get_string('pagetitle', 'local_hackfrst');
 // Set up the page.
 $url = new moodle_url("/local/hackfest/index.php");
 $PAGE->set_context(context_system::instance());
 $PAGE->set_url($url);
 $PAGE->set_title($title);
 $PAGE->set_heading($title);
-$output = $PAGE->get_renderer('local_hackfest');
+$output = $PAGE->get_renderer('local_hackfrst');
 echo $output->header();
 
-$page = new \local_hackfest\output\index_page();
+$page = new \local_hackfrst\output\index_page();
 echo $output->render($page);
 
 echo $output->footer();

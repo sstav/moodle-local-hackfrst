@@ -17,15 +17,15 @@
 /**
  * Local hackfest external services.
  *
- * @package    local_hackfest
+ * @package    local_hackfrst
  * @copyright  2015 Damyon Wiese
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 $functions = array(
 
-    'local_hackfest_get_site_info' => array(
-        'classname'   => 'local_hackfest\external',
+    'local_hackfrst_get_site_info' => array(
+        'classname'   => 'local_hackfrst\external',
         'methodname'  => 'get_site_info',
         'classpath'   => '',
         'description' => 'Return some site info.',

@@ -17,11 +17,11 @@
 /**
  * Renderer class for local hackfest.
  *
- * @package    local_hackfest
+ * @package    local_hackfrst
  * @copyright  2015 Damyon Wiese
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-namespace local_hackfest\output;
+namespace local_hackfrst\output;
 
 defined('MOODLE_INTERNAL') || die;
 
@@ -30,7 +30,7 @@ use plugin_renderer_base;
 /**
  * Renderer class for local hackfest.
  *
- * @package    local_hackfest
+ * @package    local_hackfrst
  * @copyright  2015 Damyon Wiese
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -45,7 +45,7 @@ class renderer extends plugin_renderer_base {
      */
     public function render_index_page($page) {
         $data = $page->export_for_template($this);
-        return parent::render_from_template('local_hackfest/index_page', $data);
+        return parent::render_from_template('local_hackfrst/index_page', $data);
     }
 
 }
