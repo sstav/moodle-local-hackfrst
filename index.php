@@ -28,11 +28,13 @@ $title = get_string('pagetitle', 'local_hackfrst');
 $pagetitle = get_string('pagetitle', 'local_hackfrst');
 // Set up the page.
 $url = new moodle_url("/local/hackfest/index.php");
+
 $PAGE->set_context(context_system::instance());
 $PAGE->set_url($url);
 $PAGE->set_title($title);
 $PAGE->set_heading($title);
 $output = $PAGE->get_renderer('local_hackfrst');
+$PAGE->requires->js_call_amd('local_hackfrst/refresh', 'refresh');
 echo $output->header();
 
 $page = new \local_hackfrst\output\index_page();

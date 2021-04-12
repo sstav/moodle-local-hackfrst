@@ -3,7 +3,6 @@
   <component name="PhpIncludePathManager">
     <include_path>
       <path value="$PROJECT_DIR$/../.." />
-      <path value="$PROJECT_DIR$/../../node_modules" />
     </include_path>
   </component>
 </project>

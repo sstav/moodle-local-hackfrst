@@ -25,7 +25,12 @@
  * @since      2.9
  */
 /* eslint-disable no-trailing-spaces */
-define(['jquery', 'core/ajax', 'core/templates', 'core/notification'], function($, ajax, templates, notification) { 
+/* eslint-disable no-console */
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
+
+define(['jquery', 'core/ajax', 'core/config','core/templates', 'core/notification'],
+    function($, ajax, config, templates, notification) {
     return /** @alias module:local_hackfrst/refresh */ {
         
         /**
@@ -33,25 +38,22 @@ define(['jquery', 'core/ajax', 'core/templates', 'core/notification'], function(
          *
          * @method refresh
          */
-        refresh: function() {
+        refresh: () => {
             // Add a click handler to the button.
-            $('[data-region="index-page"] #refresh').on('click', function() {
+            function init(){
+                $('#refresh').on('click', () => {
+                    let str = document.getElementById('elem').value;
+                    // First - reload the data for the page.
+                    ajax.call([{
+                        methodname: 'local_integrator_teta',
+                        args: { "PARAM1": str },
+                        done: (r) => {notification.alert('שלום', r.toString(), 'המשך');},
+                        fail: notification.exception
+                    }]);
+                });
+            }
 
-                // First - reload the data for the page.
-                var promises = ajax.call([{
-                    methodname: 'local_integrator_teta',
-                    args:{ "PARAM1": 123123 }
-                }]);
-                promises[0].done(function(data) {
-
-                    // We have the data - lets re-render the template with it.
-                    templates.render('local_hackfrst/index_page', data).done(function(html, js) {
-                        $('[data-region="index-page"]').replaceWith(html);
-                        // And execute any JS that was in the template.
-                        templates.runTemplateJS(js);
-                    }).fail(notification.exception);
-                }).fail(notification.exception);
-            });
+            $( () => { init(); });
         }
     };
 });

@@ -22,5 +22,5 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pagetitle'] = 'עמוד הבית עם כל היופי';
-$string['pluginname'] = 'האקיסט דמו';
+$string['pagetitle'] = 'עמוד הבית';
+$string['pluginname'] = 'האקפרסט';
